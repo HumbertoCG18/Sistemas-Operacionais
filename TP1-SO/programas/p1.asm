@@ -1,10 +1,12 @@
 .code
-LOAD variable
-ponto1: SUB #1
-SYSCALL 1
-BRPOS ponto1
-SYSCALL 0
+  load a
+  add #1
+  sub #2
+  syscall 1 # print 9
+  store a
+  syscall 0
 .endcode
+
 .data
-variable 3
+  a 10
 .enddata
